@@ -1,4 +1,5 @@
 # Binaries
+fedramp
 fedramp-tui
 fedramp-tui.exe
 *.exe
@@ -42,3 +43,9 @@ Thumbs.db
 # Local env files
 .env
 .env.local
+
+# Local caches
+.cache/
+
+# VHS outputs / local demo artifacts
+demo.tape

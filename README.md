@@ -2,6 +2,10 @@
 
 A terminal user interface for browsing FedRAMP documentation.
 
+## Demo
+
+![FedRAMP TUI demo](demo.gif)
+
 ## Features
 
 - **Document Navigator**: Browse all 12 FedRAMP document categories
