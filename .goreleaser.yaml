@@ -1,0 +1,63 @@
+version: 2
+project_name: fedramp
+
+builds:
+  - main: .
+    binary: fedramp
+    env:
+      - CGO_ENABLED=0
+    ldflags:
+      - -s -w
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - format: binary
+    name_template: "{{ .ProjectName }}-{{ .Os }}-{{ .Arch }}"
+
+checksum:
+  name_template: 'checksums.txt'
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - '^ci:'
+      - Merge pull request
+      - Merge branch
+
+release:
+  github:
+    owner: ethanolivertroy
+    name: fedramp-tui
+
+brews:
+  - repository:
+      owner: ethanolivertroy
+      name: homebrew-sectools
+      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
+    directory: Formula
+    homepage: "https://github.com/ethanolivertroy/fedramp-tui"
+    description: "Terminal UI for browsing FedRAMP authorized cloud services"
+    license: "MIT"
+    install: |
+      bin.install "fedramp"
+    test: |
+      assert_match "FedRAMP", shell_output("#{bin}/fedramp --help 2>&1", 1)
+
+scoops:
+  - repository:
+      owner: ethanolivertroy
+      name: scoop-sectools
+      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
+    directory: bucket
+    homepage: "https://github.com/ethanolivertroy/fedramp-tui"
+    description: "Terminal UI for browsing FedRAMP authorized cloud services"
+    license: "MIT"
