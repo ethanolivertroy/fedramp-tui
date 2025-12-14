@@ -11,6 +11,13 @@ A terminal user interface for browsing FedRAMP documentation.
 
 ## Installation
 
+### Homebrew
+
+```bash
+brew tap ethanolivertroy/sectools
+brew install fedramp-tui
+```
+
 ### From Source
 
 ```bash
