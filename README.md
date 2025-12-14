@@ -80,6 +80,10 @@ Data is fetched directly from the [FedRAMP/docs](https://github.com/FedRAMP/docs
 | PVA | Persistent Validation & Assessment |
 | SCN | Significant Change Notifications |
 
+## Acknowledgments
+
+Built with [GoReleaser](https://goreleaser.com/) by [Carlos Becker](https://github.com/caarlos0).
+
 ## License
 
 MIT
