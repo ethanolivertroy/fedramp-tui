@@ -109,6 +109,10 @@ Data is fetched directly from the [FedRAMP/docs](https://github.com/FedRAMP/docs
 
 Built with [GoReleaser](https://goreleaser.com/) by [Carlos Becker](https://github.com/caarlos0).
 
+## Disclaimer
+
+This is not an official FedRAMP tool and I'm not officially associated with the GSA/FedRAMP PMO.
+
 ## License
 
 MIT
