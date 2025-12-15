@@ -22,7 +22,7 @@ archives:
     name_template: "{{ .ProjectName }}-{{ .Os }}-{{ .Arch }}"
     format_overrides:
       - goos: windows
-        formats: [zip]
+        format: zip
 
 checksum:
   name_template: 'checksums.txt'
