@@ -83,7 +83,7 @@ func (c *Cache) Clear() error {
 
 	for _, entry := range entries {
 		if !entry.IsDir() {
-			os.Remove(filepath.Join(c.Dir, entry.Name()))
+			_ = os.Remove(filepath.Join(c.Dir, entry.Name()))
 		}
 	}
 	return nil

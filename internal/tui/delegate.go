@@ -100,11 +100,11 @@ func (d ItemDelegate) Render(w io.Writer, m list.Model, index int, item list.Ite
 		b.WriteString(" ")
 	}
 	b.WriteString(titleStyle.Render(title))
-	fmt.Fprintln(w, b.String())
+	_, _ = fmt.Fprintln(w, b.String())
 
 	// Second line: description (if enabled)
 	if d.ShowDescription && desc != "" {
-		fmt.Fprintln(w, "  "+descStyle.Render(desc))
+		_, _ = fmt.Fprintln(w, "  "+descStyle.Render(desc))
 	}
 }
 

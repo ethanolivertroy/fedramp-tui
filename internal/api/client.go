@@ -129,7 +129,7 @@ func (c *Client) fetchDocument(filename string) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("HTTP %d: %s", resp.StatusCode, resp.Status)
@@ -149,7 +149,7 @@ func (c *Client) fetchDocument(filename string) ([]byte, error) {
 
 	// Save to cache
 	if c.cache != nil {
-		c.cache.Set(url, data)
+		_ = c.cache.Set(url, data)
 	}
 
 	return data, nil

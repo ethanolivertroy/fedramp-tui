@@ -12,7 +12,13 @@ linters:
     gosec:
       excludes:
         - G301  # directory permissions
+        - G304  # file inclusion via variable (false positive for cache)
         - G306  # file permissions
+    staticcheck:
+      checks:
+        - "all"
+        - "-QF*"  # disable quick fix suggestions
+        - "-S1009" # nil check before len is fine for readability
 issues:
   max-issues-per-linter: 0
   max-same-issues: 0
