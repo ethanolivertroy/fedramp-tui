@@ -111,7 +111,9 @@ Data is fetched directly from the [FedRAMP/docs](https://github.com/FedRAMP/docs
 
 ## Acknowledgments
 
-Built with [GoReleaser](https://goreleaser.com/) by [Carlos Becker](https://github.com/caarlos0).
+- [Charm](https://charm.sh/) for the TUI libraries: [Bubble Tea](https://github.com/charmbracelet/bubbletea), [Lip Gloss](https://github.com/charmbracelet/lipgloss), [Bubbles](https://github.com/charmbracelet/bubbles)
+- [GoReleaser](https://goreleaser.com/) for release automation
+- [FedRAMP](https://github.com/FedRAMP/docs) for the source documentation
 
 ## Disclaimer
 
