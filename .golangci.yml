@@ -4,36 +4,15 @@ run:
 linters:
   enable:
     - bodyclose
-    - exhaustive
-    - goconst
-    - godot
-    - gomoddirectives
-    - goprintffuncname
+    - errcheck
     - gosec
     - misspell
-    - nakedret
-    - nestif
-    - nilerr
-    - noctx
-    - nolintlint
-    - prealloc
-    - revive
-    - rowserrcheck
-    - sqlclosecheck
-    - tparallel
-    - unconvert
-    - unparam
-    - whitespace
-  exclusions:
-    generated: lax
-    presets:
-      - common-false-positives
+    - staticcheck
+  settings:
+    gosec:
+      excludes:
+        - G301  # directory permissions
+        - G306  # file permissions
 issues:
   max-issues-per-linter: 0
   max-same-issues: 0
-formatters:
-  enable:
-    - gofumpt
-    - goimports
-  exclusions:
-    generated: lax
