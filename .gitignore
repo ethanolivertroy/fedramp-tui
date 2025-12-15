@@ -47,5 +47,6 @@ Thumbs.db
 # Local caches
 .cache/
 
-# VHS outputs / local demo artifacts
-demo.tape
+# VHS local test artifacts
+demo-*.tape
+demo-*.gif
