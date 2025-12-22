@@ -1,0 +1,48 @@
+name: Upstream Check
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6am UTC
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check-upstream:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check FedRAMP JSON URLs
+        run: |
+          BASE_URL="https://raw.githubusercontent.com/FedRAMP/docs/main"
+          FILES=(
+            "FRMR.FRD.fedramp-definitions.json"
+            "FRMR.KSI.key-security-indicators.json"
+            "FRMR.VDR.vulnerability-detection-and-response.json"
+            "FRMR.UCM.using-cryptographic-modules.json"
+            "FRMR.RSC.recommended-secure-configuration.json"
+            "FRMR.ADS.authorization-data-sharing.json"
+            "FRMR.CCM.collaborative-continuous-monitoring.json"
+            "FRMR.FSI.fedramp-security-inbox.json"
+            "FRMR.ICP.incident-communications-procedures.json"
+            "FRMR.MAS.minimum-assessment-scope.json"
+            "FRMR.PVA.persistent-validation-and-assessment.json"
+            "FRMR.SCN.significant-change-notifications.json"
+          )
+
+          FAILED=0
+          for file in "${FILES[@]}"; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/$file")
+            if [ "$STATUS" != "200" ]; then
+              echo "::error::$file returned HTTP $STATUS"
+              FAILED=1
+            else
+              echo "✓ $file"
+            fi
+          done
+
+          if [ "$FAILED" = "1" ]; then
+            echo "::error::One or more FedRAMP JSON files are unavailable. The upstream repo may have changed."
+            exit 1
+          fi
+
+          echo "All 12 FedRAMP JSON files are accessible."
