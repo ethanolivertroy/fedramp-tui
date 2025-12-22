@@ -1,5 +1,10 @@
 # FedRAMP TUI
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/ethanolivertroy/fedramp-tui)](https://goreportcard.com/report/github.com/ethanolivertroy/fedramp-tui)
+[![Release](https://img.shields.io/github/v/release/ethanolivertroy/fedramp-tui)](https://github.com/ethanolivertroy/fedramp-tui/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/ethanolivertroy/fedramp-tui/badge)](https://scorecard.dev/viewer/?uri=github.com/ethanolivertroy/fedramp-tui)
+
 A terminal user interface for browsing FedRAMP documentation.
 
 ## Demo
@@ -121,4 +126,4 @@ This is not an official FedRAMP tool and I'm not officially associated with the 
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
