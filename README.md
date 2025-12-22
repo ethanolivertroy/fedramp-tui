@@ -4,6 +4,7 @@
 [![Release](https://img.shields.io/github/v/release/ethanolivertroy/fedramp-tui)](https://github.com/ethanolivertroy/fedramp-tui/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/ethanolivertroy/fedramp-tui/badge)](https://scorecard.dev/viewer/?uri=github.com/ethanolivertroy/fedramp-tui)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11619/badge)](https://www.bestpractices.dev/projects/11619)
 
 A terminal user interface for browsing FedRAMP documentation.
 
