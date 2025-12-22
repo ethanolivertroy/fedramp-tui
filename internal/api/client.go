@@ -11,7 +11,7 @@ import (
 	"github.com/ethanolivertroy/fedramp-tui/internal/model"
 )
 
-const BaseURL = "https://raw.githubusercontent.com/FedRAMP/docs/main/data"
+const BaseURL = "https://raw.githubusercontent.com/FedRAMP/docs/main"
 
 // DocumentFiles maps document codes to their filenames
 var DocumentFiles = map[string]DocumentMetadata{
