@@ -69,13 +69,3 @@ scoops:
     description: "Terminal UI for browsing FedRAMP authorized cloud services"
     license: "MIT"
 
-nfpms:
-  - id: msi
-    package_name: fedramp
-    vendor: ethanolivertroy
-    homepage: "https://github.com/ethanolivertroy/fedramp-tui"
-    maintainer: "Ethan Troy"
-    description: "Terminal UI for browsing FedRAMP authorized cloud services"
-    license: MIT
-    formats:
-      - msi
